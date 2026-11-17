@@ -1,0 +1,6 @@
+{
+  "sdkRoot" : "C:/Users/Ryuu/Desktop/gecko-sdk/",
+  "apackRoot" : "C:\\Users\\Ryuu\\Desktop\\gecko-sdk\\protocol\\bluetooth\\bin\\gatt",
+  "partOpn" : "efr32mg24b210f1536im48",
+  "boards" : "none"
+}

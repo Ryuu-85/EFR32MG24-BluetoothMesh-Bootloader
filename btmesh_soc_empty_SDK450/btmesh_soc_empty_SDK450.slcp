@@ -1,0 +1,240 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: btmesh_soc_empty_SDK450
+label: btmesh_soc_empty_SDK450
+description: |
+  Demonstrates the bare minimum needed for a Bluetooth Mesh C application. The application starts Unprovisioned Device Beaconing after booting, and then waits to be provisioned.
+category: Bluetooth Mesh Examples
+filter:
+- name: Device Type
+  value:
+  - SoC
+- name: Project Difficulty
+  value:
+  - Beginner
+- name: Wireless Technology
+  value:
+  - Bluetooth Mesh
+package: Btmesh
+quality: production
+readme:
+- path: readme.md
+source:
+- path: app.c
+- path: main.c
+- path: zigbee_transfer.c
+tag:
+- hardware:rf:band:2400
+- hardware:device:flash:512
+- hardware:device:ram:32
+include:
+- path: .
+  file_list:
+  - path: app.h
+  - path: zigbee_transfer.h
+sdk:
+  vendor: null
+  id: gecko_sdk
+  version: 4.5.0
+toolchain_settings: [
+  ]
+component:
+- id: EFR32MG24B210F1536IM48
+- id: app_assert
+- id: app_log
+- id: bootloader_interface
+- id: brd4186c
+- id: bt_post_build
+- id: btmesh_provisionee
+- id: btmesh_proxy
+- id: btmesh_stack
+- id: btmesh_stack_gatt_prov_bearer
+- id: btmesh_stack_node
+- id: btmesh_stack_relay
+- id: btmesh_stack_test
+- id: btmesh_stack_vendor_model
+- id: iostream_retarget_stdio
+- instance:
+  - vcom
+  id: iostream_usart
+- id: mpu
+- id: rail_util_pti
+- id: toolchain_gcc
+autoselected_components:
+- id: app_btmesh_util
+- id: app_timer
+- id: atomic
+- id: bluetooth_common
+- id: bluetooth_configuration
+- id: bluetooth_controller_libraries
+- id: bluetooth_crypto
+- id: bluetooth_device_compatibility
+- id: bluetooth_feature_advertiser
+- id: bluetooth_feature_connection
+- id: bluetooth_feature_dynamic_gattdb
+- id: bluetooth_feature_gap
+- id: bluetooth_feature_gatt_server
+- id: bluetooth_feature_legacy_advertiser
+- id: bluetooth_feature_legacy_scanner
+- id: bluetooth_feature_scanner
+- id: bluetooth_feature_system
+- id: bluetooth_gattdb_definition
+- id: bluetooth_host_release_libraries
+- id: bluetooth_stack
+- id: bluetooth_version
+- id: board_control
+- id: bootloader_app_properties
+- id: brd4002a
+- id: brd4186c_config
+- id: btmesh_dcd_configuration
+- id: btmesh_stack_advertiser_legacy
+- id: btmesh_stack_crypto
+- id: btmesh_stack_crypto_key_cache
+- id: btmesh_stack_health_server
+- id: btmesh_stack_proxy
+- id: btmesh_stack_proxy_server
+- id: btmesh_stack_scanner_legacy
+- id: cmsis_core
+- id: component_catalog
+- id: configuration_over_swo
+- id: debug_swo
+- id: device_init
+- id: device_init_clocks
+- id: device_init_core
+- id: device_init_dcdc
+- id: device_init_emu
+- id: device_init_hfxo
+- id: device_init_lfrco
+- id: device_init_lfxo
+- id: device_init_nvic
+- id: dmadrv
+- id: ecode
+- id: emlib
+- id: emlib_acmp
+- id: emlib_burtc
+- id: emlib_chip
+- id: emlib_cmu
+- id: emlib_common
+- id: emlib_core
+- id: emlib_dbg
+- id: emlib_emu
+- id: emlib_eusart
+- id: emlib_gpcrc
+- id: emlib_gpio
+- id: emlib_i2c
+- id: emlib_iadc
+- id: emlib_ldma
+- id: emlib_letimer
+- id: emlib_msc
+- id: emlib_opamp
+- id: emlib_pcnt
+- id: emlib_prs
+- id: emlib_rmu
+- id: emlib_se
+- id: emlib_smu
+- id: emlib_syscfg
+- id: emlib_system
+- id: emlib_timer
+- id: emlib_usart
+- id: emlib_vdac
+- id: emlib_wdog
+- id: enum
+- id: event_handler
+- id: gatt_configuration
+- id: hfxo_manager
+- id: iostream
+- id: iostream_stdlib_config
+- id: iostream_uart_common
+- id: iostream_usart_core
+- id: mbedtls_config
+- id: mbedtls_core
+- id: mbedtls_platform_dynamic_memory_allocation_config_default
+- id: mbedtls_slcrypto
+- id: mbedtls_slcrypto_driver
+- id: mbedtls_source
+- id: mx25_flash_shutdown_usart
+- id: nvm3_default
+- id: nvm3_default_config
+- id: nvm3_default_flash_backend
+- id: nvm3_lib
+- id: peripheral_sysrtc
+- id: power_manager
+- id: power_manager_core
+- id: power_manager_deepsleep
+- id: power_manager_handler_implementation
+- id: psa_crypto
+- id: psa_crypto_aes
+- id: psa_crypto_ccm
+- id: psa_crypto_cipher_ecb
+- id: psa_crypto_cmac
+- id: psa_crypto_common
+- id: psa_crypto_config
+- id: psa_crypto_ecc
+- id: psa_crypto_ecc_secp256r1
+- id: psa_crypto_ecdh
+- id: psa_crypto_hash
+- id: psa_crypto_hmac
+- id: psa_crypto_sha1
+- id: psa_crypto_sha256
+- id: psa_crypto_source
+- id: psa_crypto_trng
+- id: psa_driver
+- id: psa_driver_source
+- id: psa_its
+- id: rail_lib
+- id: rail_lib_singleprotocol
+- id: rail_util_built_in_phys
+- id: rail_util_features
+- id: rail_util_pa
+- id: rail_util_power_manager_init
+- id: rail_util_sequencer
+- id: se_manager
+- id: se_manager_config
+- id: se_manager_crypto
+- id: se_manager_osal
+- id: silabs_core_sl_malloc
+- id: sl_assert
+- id: sl_common
+- id: sl_memory
+- id: sl_string
+- id: sl_syscalls
+- id: sl_system
+- id: sl_system_init
+- id: sl_system_process_action
+- id: sleeptimer
+- id: sli_protocol_crypto
+- id: slist
+- id: status
+- id: toolchain_variant_arm
+- id: trustzone_unaware
+- id: udelay
+other_file:
+- path: readme_img0.png
+- path: readme_img1.png
+- path: readme_img2.png
+- path: readme_img3.png
+- path: readme_img4.png
+- path: readme_img5.png
+configuration:
+- name: SL_BOARD_ENABLE_VCOM
+  value: '1'
+- name: SL_IOSTREAM_USART_VCOM_FLOW_CONTROL_TYPE
+  value: usartHwFlowControlNone
+- name: NVM3_DEFAULT_NVM_SIZE
+  value: '0x6000'
+- name: SL_BTMESH_CONFIG_MAX_PROV_BEARERS
+  value: '3'
+- name: SL_HEAP_SIZE
+  value: '0x4000'
+- condition:
+  - psa_crypto
+  name: SL_PSA_KEY_USER_SLOT_COUNT
+  value: '0'
+- name: SL_STACK_SIZE
+  value: '0x1200'
+ui_hints:
+  highlight:
+  - path: config/btconf/gatt_configuration.btconf
+  - path: config/btmeshconf/dcd_config.btmeshconf
+  - path: readme.md
+    focus: true
+

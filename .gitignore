@@ -1,0 +1,11 @@
+# Build outputs and machine-specific settings
+**/build/
+**/build_*/
+**/.cmake/
+**/.vscode/
+**/.projectlinkstore
+**/.silabsExtContext
+**/trashed_modified_files/
+*.bak
+*.bak0
+*.bak.bak

@@ -1,0 +1,6 @@
+{
+  "sdkRoot" : "C:/Users/Ryuu/Desktop/gecko-sdk/",
+  "apackRoot" : "C:\\Users\\Ryuu\\Desktop\\gecko-sdk\\app\\btmesh\\script\\generator",
+  "partOpn" : "efr32mg24b210f1536im48",
+  "boards" : "brd4186crevA01,brd4002arevA06"
+}

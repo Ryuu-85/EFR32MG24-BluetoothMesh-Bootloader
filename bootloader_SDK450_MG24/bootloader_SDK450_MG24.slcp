@@ -1,0 +1,164 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: bootloader_SDK450_MG24
+label: bootloader_SDK450_MG24
+description: |
+  This sample configuration of the Gecko bootloader configures the bootloader to use the internal main flash to store firmware update images. The storage configuration is set up to store a single firmware update image at a time, in a single storage slot. The storage slot is configured to start at address 0xc0000 (or 0x80c0000 for device with 0x8000000 flash base), and have a size of 728 kB. This can be configured on the "Storage" tab.
+category: Example|Bootloader
+filter:
+- name: Device Type
+  value:
+  - SoC
+- name: MCU
+  value:
+  - Bootloader
+- name: Project Difficulty
+  value:
+  - Advanced
+package: bootloader
+quality: production
+readme:
+- path: readme.md
+tag:
+- hardware:device:flash:1536
+sdk:
+  vendor: null
+  id: gecko_sdk
+  version: 4.5.0
+toolchain_settings: [
+  ]
+component:
+- id: EFR32MG24B210F1536IM48
+- id: bootloader_aes_sha_ecdsa
+- id: bootloader_common_storage
+- id: bootloader_core
+- id: bootloader_crc
+- id: bootloader_debug
+- id: bootloader_image_parser
+- id: bootloader_internal_storage
+- id: bootloader_storage_slots
+- id: bootloader_token_management
+- id: brd4186c
+- id: toolchain_gcc
+autoselected_components:
+- id: bootloader_aes_ctr_stream_block_cfg
+- id: bootloader_include_parser
+- id: brd4002a
+- id: brd4186c_config
+- id: cmsis_core
+- id: component_catalog
+- id: emlib
+- id: emlib_acmp
+- id: emlib_burtc
+- id: emlib_chip
+- id: emlib_cmu
+- id: emlib_common
+- id: emlib_core
+- id: emlib_dbg
+- id: emlib_emu
+- id: emlib_eusart
+- id: emlib_gpcrc
+- id: emlib_gpio
+- id: emlib_i2c
+- id: emlib_iadc
+- id: emlib_ldma
+- id: emlib_letimer
+- id: emlib_msc
+- id: emlib_opamp
+- id: emlib_pcnt
+- id: emlib_prs
+- id: emlib_rmu
+- id: emlib_se
+- id: emlib_smu
+- id: emlib_syscfg
+- id: emlib_system
+- id: emlib_timer
+- id: emlib_usart
+- id: emlib_vdac
+- id: emlib_wdog
+- id: enum
+- id: mbedtls_aes
+- id: mbedtls_cipher_ctr
+- id: mbedtls_config
+- id: mbedtls_core
+- id: mbedtls_platform_dynamic_memory_allocation_config_default
+- id: mbedtls_slcrypto
+- id: mbedtls_slcrypto_driver
+- id: mbedtls_source
+- id: psa_crypto_common
+- id: psa_crypto_config
+- id: psa_driver
+- id: psa_driver_source
+- id: se_manager
+- id: se_manager_config
+- id: se_manager_crypto
+- id: se_manager_osal
+- id: silabs_core_sl_malloc
+- id: sl_assert
+- id: sl_common
+- id: sl_fault_injection_hardening
+- id: sl_memory
+- id: sl_syscalls
+- id: status
+- id: toolchain_variant_arm
+- id: trustzone_secure
+configuration:
+- name: SLOT0_ENABLE
+  value: '1'
+- name: SLOT0_SIZE
+  value: '737280'
+- condition:
+  - device_series_1
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '786432'
+- condition:
+  - device_series_1
+  name: SLOT0_START
+  value: '786432'
+- condition:
+  - device_sdid_200
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '786432'
+- condition:
+  - device_sdid_200
+  name: SLOT0_START
+  value: '786432'
+- condition:
+  - device_sdid_205
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '786432'
+- condition:
+  - device_sdid_205
+  name: SLOT0_START
+  value: '786432'
+- condition:
+  - device_sdid_210
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '135004160'
+- condition:
+  - device_sdid_210
+  name: SLOT0_START
+  value: '135004160'
+- condition:
+  - device_sdid_215
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '135004160'
+- condition:
+  - device_sdid_215
+  name: SLOT0_START
+  value: '135004160'
+- condition:
+  - device_sdid_220
+  name: BTL_STORAGE_BASE_ADDRESS
+  value: '135004160'
+- condition:
+  - device_sdid_220
+  name: SLOT0_START
+  value: '135004160'
+ui_hints:
+  highlight:
+  - path: readme.md
+    focus: true
+post_build:
+  path: bootloader_SDK450_MG24.slpb
+  profile: bootloader_series_2
+
