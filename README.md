@@ -1,5 +1,16 @@
 # EFR32MG24 Bluetooth Mesh 与 Bootloader
 
+## English overview
+
+This repository contains a Bluetooth Mesh application and a Gecko Bootloader for the Silicon Labs EFR32MG24. Both projects target EFR32MG24B210F1536IM48 and BRD4186C and specify Gecko SDK 4.5.0.
+
+- `btmesh_soc_empty_SDK450/`: Bluetooth Mesh application with a serial-to-Mesh interface. Despite its name, `zigbee_transfer.c` does not by itself implement a complete Zigbee stack.
+- `bootloader_SDK450_MG24/`: Gecko Bootloader configured with a single internal-flash storage slot for firmware update images.
+
+The application includes test Mesh keys and self-provisioning logic. Review security and provisioning before deployment. The SDK is not included; install it separately. This snapshot has not been rebuilt or validated on hardware in the current environment.
+
+## 中文简介
+
 本仓库保存两个 Silicon Labs 工程：
 
 - `btmesh_soc_empty_SDK450/`：Bluetooth Mesh 应用。主要逻辑位于 `app.c`，`zigbee_transfer.c` 实现串口与 Mesh 数据转发接口；文件名不代表包含完整 Zigbee 协议栈。
